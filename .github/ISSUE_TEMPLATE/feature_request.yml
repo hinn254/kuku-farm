@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest an improvement or new capability
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user or farm-ops pain does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Farm ops (flocks, eggs, cages)
+        - Finance (sales, expenses, invoices)
+        - Storefront / Paystack
+        - Auth / multi-farm
+        - DX / docs / CI
+        - Other
+    validations:
+      required: true
