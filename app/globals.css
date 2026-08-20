@@ -128,3 +128,28 @@
     @apply font-sans;
   }
 }
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .invoice-print-page,
+  .invoice-print-page * {
+    visibility: visible;
+  }
+  .invoice-print-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .invoice-sheet {
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .print\:hidden {
+    display: none !important;
+  }
+}
